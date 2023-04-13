@@ -3,11 +3,13 @@ import pyfiglet
 import sys
 from datetime import datetime
 
+protocols=[]
 header=pyfiglet.figlet_format("PORT SCANNER")
 print(header)
 
 print('-'*50)
-target_ip=input("Enter target ipv4 address: ")
+target_host=input("Enter hostname: ")
+target_ip=socket.gethostbyname(target_host)
 print(str(datetime.now()))
 print('-'*50)
 
@@ -22,6 +24,6 @@ try:
 
 except KeyboardInterrupt:
     sys.exit()
-except socket.error:
-    print("Socket error :(")
+except socket.error as e:
+    print("Socket error :(",e)
     sys.exit()
