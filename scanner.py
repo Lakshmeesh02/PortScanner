@@ -2,7 +2,6 @@ import socket
 import pyfiglet
 import sys
 from datetime import datetime
-import os
 
 header=pyfiglet.figlet_format("PORT SCANNER")   # design banner
 print(header)
