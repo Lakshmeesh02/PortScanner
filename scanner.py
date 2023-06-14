@@ -14,6 +14,7 @@ except:
     print("Invalid hostname..")
     sys.exit()
 '''
+
 target_ip=input("Enter ip address: ")
 print(str(datetime.now())[:19])
 date_time=str(datetime.now())[:19]
